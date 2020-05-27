@@ -74,7 +74,8 @@ class NetworkTrainer(object):
             torch.backends.cudnn.benchmark = True
 
         ################# SET THESE IN self.initialize() ###################################
-        self.network: Tuple[SegmentationNetwork, nn.DataParallel] = None
+        #self.network: Tuple[SegmentationNetwork, nn.DataParallel] = None
+        self.network = None
         self.optimizer = None
         self.lr_scheduler = None
         self.tr_gen = self.val_gen = None
